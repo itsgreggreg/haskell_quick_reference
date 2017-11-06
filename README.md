@@ -16,3 +16,9 @@ data Pet
   = Hamster Age 
   | Fish Age
 ```
+
+```haskell
+data Maybe a
+  = Just a
+  | Nothing
+```
