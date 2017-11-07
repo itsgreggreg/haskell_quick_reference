@@ -1,7 +1,7 @@
 # Haskell Quick Reference
  - Haskell home page : https://www.haskell.org/
  - 5 minute haskell introduction : https://www.tryhaskell.org/
- - Try Haskell online : https://glot.io/new/haskell | https://repl.it/languages/haskell
+ - Try Haskell online : https://glot.io/new/haskell , https://repl.it/languages/haskell
  
 ## Types
 ### Creating types
