@@ -17,7 +17,7 @@ type Age =
 --       ⇣
 newtype Age = 
   Age Int
--- |   ↳ What you must pass in to construct this type
+-- |   🡑 What you must pass in to construct this type
 -- ↳ Value Constructor
 ```
 
