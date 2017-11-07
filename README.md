@@ -73,11 +73,13 @@ data Person = Person
  
 #### tagged union
 ```haskell
---          ┌ Type Variable
---          ⇣
- data Maybe a
-   = Just a
-   | Nothing
+--         ┌ Type Variable
+--         ⇣
+data Maybe a
+  = Nothing
+  | Just a
+--       ↑
+--       └ The constructor "Just" can be passed a value of any type to produce value of type "Maybe"
 ```
 
 ### Type Classes
