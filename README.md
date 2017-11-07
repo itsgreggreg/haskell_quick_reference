@@ -1,4 +1,6 @@
 ### Creating types
+ - Types being the foundation of functional programming we must be able to define our own.
+ - These are all the ways we can do so in Haskell:
 #### Alias an Eixisting type
  - Creates merely an `alias` for an existing type.
  - Can make code more readable.
