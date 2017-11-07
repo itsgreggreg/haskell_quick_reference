@@ -1,8 +1,13 @@
 # Haskell Quick Reference
  - Haskell home page : https://www.haskell.org/
+ - API search : https://www.haskell.org/hoogle/
  - 5 minute haskell introduction : https://www.tryhaskell.org/
  - Try Haskell online : https://glot.io/new/haskell , https://repl.it/languages/haskell
  - Style guide : https://github.com/tibbe/haskell-style-guide/blob/master/haskell-style.md
+ 
+### Tools
+ - Code linter : https://github.com/ndmitchell/hlint#readme
+ - All in 1 platform : https://docs.haskellstack.org
  
 # Types
 ## Creating types
