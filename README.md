@@ -126,5 +126,17 @@ data Maybe a
 |!|?| #| *| @| [\|, \|]| `\` | _ |
 |{, }|{-, -}|\|| | | | | | |
 
+# Repl
+ - Start by running `ghci`
+ - If you're using Stack, start by running `stack ghci` or `stack repl`
+ 
+ ## Useful Commands
+  - `:help` -or- `:h` : Print a list of repl commands
+  - `:type some-value` or `:t some-value` : Display type information for a value
+  ```haskell
+> :t (round 1.5)
+(round 1.5) :: Integral b => b
+  ```
+
 # More Fun Stuff
  - Literate Haskell : https://wiki.haskell.org/Literate_programming
