@@ -110,10 +110,10 @@ data Maybe a
 
 | | | | | | | | |
 |-|-|-|-|-|-|-|-|
-|as|case|class|data|else|family|instance|default|
-|deriving|instance|do|forall|foreign|hiding|if|import|
-|in|infix|infixl|infixr|instance|let|mdo|module|
-|newtype|of|proc|qualified|rec|then |type|where|
+|as|case|class|data|else|family|default|deriving|
+|do|forall|foreign|hiding|if|import|in|infix|
+|infixl|infixr|instance|let|mdo|module|newtype|of|
+|proc|qualified|rec|then |type|where| | |
 
 # Reserved Symbols
 | | | | | | | | |
