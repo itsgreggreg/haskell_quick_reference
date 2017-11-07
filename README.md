@@ -4,7 +4,8 @@
  - Can make code more readable.
  - Can be used interchangeably with what is being aliased. Compiler don't care.
 ```haskell
--- Age is simply an alias for Int, they can be used interchangeably
+--    ┌ Age is simply an alias for Int, they can be used interchangeably
+--    ⇣
 type Age = 
   Int
 ```
@@ -12,15 +13,12 @@ type Age =
 #### Create a new type
  - Creates a `brand new` type.
 ```haskell
-newtype Age = 
-  Age Int
-
 --       ┌ Type Name
 --       ⇣
 newtype Age = 
--- ┌ Value Constructor
--- ⇣
   Age Int
+-- ↑   └ What you must pass in to construct this type
+-- └ Value Constructor
 ```
 
 #### data
