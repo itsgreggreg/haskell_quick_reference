@@ -1,3 +1,9 @@
+# Haskell Quick Reference
+ - Haskell home page : https://www.haskell.org/
+ - 5 minute haskell introduction : https://www.tryhaskell.org/
+ - Try Haskell online : https://glot.io/new/haskell
+ 
+## Types
 ### Creating types
  - Types being the foundation of functional programming we must be able to define our own.
  - These are all the ways we can do so in Haskell:
