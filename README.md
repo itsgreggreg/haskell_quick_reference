@@ -6,8 +6,7 @@
 ```haskell
 --    ┌ Age is simply an alias for Int, they can be used interchangeably
 --    ⇣
-type Age = 
-  Int
+type Age = Int
 ```
 
 #### Create a new type
