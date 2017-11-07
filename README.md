@@ -6,7 +6,7 @@
  - Style guide : https://github.com/tibbe/haskell-style-guide/blob/master/haskell-style.md
  
 ### Tools
- - Code linter : https://github.com/ndmitchell/hlint#readme
+ - Code linter : https://github.com/ndmitchell/hlint
  - All in 1 platform : https://docs.haskellstack.org
  
 # Types
