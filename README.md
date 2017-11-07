@@ -134,7 +134,7 @@ data Maybe a
   - `:help` -or- `:h` : Print a list of repl commands
   - `:type some-value` -or- `:t some-value` : Display type information for a value
 ```haskell
->  :t Nothing
+> :t Nothing
 Nothing :: Maybe a
 
 > :t (round 1.5)
