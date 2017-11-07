@@ -9,7 +9,7 @@
 type Age = Int
 ```
 
-#### Create a new type
+#### Create a new simple type
  - Creates a `brand new` type.
 ```haskell
 --       ┌ Type Name
@@ -21,6 +21,17 @@ newtype Age =
 
 -- A function called "Age" that takes one "Int" now exists and it produces the value "Age some-int" 
 -- which has a type of "Age"
+```
+
+ - Can take multiple paramaters
+```haskell
+newtype Coordinates = 
+  Coordinates Int Int
+--            ↑    └ Paramaters 2
+--            └ Paramaters 1
+
+-- the function "Coordinates" now requires 2 paramaters an "Int" and another "Int"
+-- in order to produce the value "Coordinates some-int some-int" of type "Coordinates"
 ```
 
 #### data
