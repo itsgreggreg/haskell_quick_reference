@@ -32,8 +32,8 @@ newtype Age =
 ```haskell
 newtype Coordinates = 
   Coordinates Int Int
---            ↑    └ Paramaters 2
---            └ Paramaters 1
+--            ↑    └ Paramater 2
+--            └ Paramater 1
 
 -- the function "Coordinates" now requires 2 paramaters an "Int" and another "Int" in
 -- order to produce the value "Coordinates some-int some-int" of type "Coordinates"
