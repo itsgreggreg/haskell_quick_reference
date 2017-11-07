@@ -23,9 +23,8 @@
  - There is no string interpolation.
  - But formatting is built into the standard library
 ```haskell
-> import Text.Printf
 > let a = [1,2,3,4]
-> printf "the length of %s is %d\n" (show a) (length a)
+> Text.Printf.printf "the length of %s is %d\n" (show a) (length a)
 ```
 
 # Types
