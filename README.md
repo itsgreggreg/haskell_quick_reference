@@ -11,6 +11,7 @@ type Age = Int
 
 #### Create a new simple type
  - Creates a `brand new` type.
+ - It is common to name the `Value Constructor` the same as the `Type Name`
 ```haskell
 --       ┌ Type Name
 --       ⇣
@@ -38,10 +39,19 @@ newtype Coordinates =
  - `data` creates either a __Tagged Union__ or a __Record Type__
  
 __Tagged union__:
+- Simply a Type with multiple `Value Cnstructors`
+- Common to name the `Value Constructors` differently than the `Type Name`
+
 ```haskell
+--    ┌ Type Name
+--    ⇣
 data Pet 
   = Hamster Age 
   | Fish Age
+--   ↑
+--   └ "Tag" -or- "Type constructor"
+
+-- Now the functions "Hamster" and "Fish" exist and they produce a value with the type of "Pet"
 ```
 From the standard lib:
 ```haskell
