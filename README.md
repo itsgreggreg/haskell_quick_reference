@@ -37,7 +37,7 @@ newtype Coordinates =
 
 #### Tagged Union
 - Simply a Type with multiple `Value Constructors`
-- Common to name the `Value Constructors` differently than the `Type Name`
+- It is common to name the `Value Constructors` differently than the `Type Name`
 
 ```haskell
 --    ┌ Type Name
