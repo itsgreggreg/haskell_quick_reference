@@ -19,7 +19,7 @@ newtype Age =
 -- ↑   └ What you must pass in to construct this type
 -- └ Value Constructor
 
--- A function called "Age" that takes one "Int" now exists and it produces the value "Age Int" 
+-- A function called "Age" that takes one "Int" now exists and it produces the value "Age some-int" 
 -- which has a type of "Age"
 ```
 
