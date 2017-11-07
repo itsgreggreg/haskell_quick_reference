@@ -10,7 +10,7 @@ newtype Age =
   Age Int
 ```
 
-### Algebraic Data Types
+#### Algebraic Data Types
 ```haskell
 data Pet 
   = Hamster Age 
