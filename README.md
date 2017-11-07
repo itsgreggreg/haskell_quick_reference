@@ -9,7 +9,25 @@
 ### Tools
  - Code linter : https://github.com/ndmitchell/hlint
  - All in 1 platform : https://docs.haskellstack.org
+
+# Basic Data Types
+## Int
+## Float
+## Char
+ - TODO Encoding
+## List
+## String
+ - A __List__ of __Characters__
+ - TODO overloading strings
  
+ - There is no string interpolation.
+ - But formatting is built into the standard library
+```haskell
+> import Text.Printf
+> let a = [1,2,3,4]
+> printf "the length of %s is %d\n" (show a) (length a)
+```
+
 # Types
 ## Creating types
 ### Alias an Eixisting type
