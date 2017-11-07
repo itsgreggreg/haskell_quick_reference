@@ -1,15 +1,25 @@
 ### Creating types
-#### type
+#### Alias an Eixisting type
  - Creates merely an `alias` for an existing type.
- - Can make code more readable
+ - Can make code more readable.
+ - Can be used interchangeably with what is being aliased. Compiler don't care.
 ```haskell
+-- Age is simply an alias for Int, they can be used interchangeably
 type Age = 
   Int
 ```
-#### newtype
+
+#### Create a new type
  - Creates a `brand new` type.
 ```haskell
 newtype Age = 
+  Age Int
+
+--       ┌ Type Name
+--       ⇣
+newtype Age = 
+-- ┌ Value Constructor
+-- ⇣
   Age Int
 ```
 
@@ -43,7 +53,7 @@ data Person = Person
  
 #### tagged union
 ```haskell
-            ┌ Type Variable
+--          ┌ Type Variable
 --          ⇣
  data Maybe a
    = Just a
