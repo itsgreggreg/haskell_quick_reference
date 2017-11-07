@@ -79,7 +79,7 @@ data Maybe a
   = Nothing
   | Just a
 --       ↑
---       └ The constructor "Just" can be passed a value of any type to produce value of type "Maybe"
+--       └ The constructor "Just" can be passed a value of any type to produce a value of type "Maybe"
 ```
 
 ### Type Classes
