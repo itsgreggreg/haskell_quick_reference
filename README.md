@@ -9,7 +9,7 @@
 type Age = Int
 ```
 
-#### Simple Type
+#### New Simple Type
  - Creates a `brand new` type.
  - It is common to name the `Value Constructor` the same as the `Type Name`
 ```haskell
