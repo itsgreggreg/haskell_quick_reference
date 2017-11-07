@@ -89,6 +89,9 @@ data Maybe a
 ```
 
 ### Type Classes
+ - For Functions to be __polymorphic__ we must have an understanding of how they will work on different __types__.
+ - Type Classes are used for just such a purpose.
+ 
 #### Class
 
 #### Instance
