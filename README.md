@@ -23,6 +23,7 @@ type Age = Int
 From the standard lib:
 ```haskell
 type String = [Char] 
+-- "String" is an alias for "List of Characters"
 ```
 
 ### New Simple Type
@@ -106,7 +107,8 @@ data Maybe a
 
 ### Instance
 
-# Reserved Words
+# Syntax
+## Reserved Words
 
 | | | | | | | | |
 |-|-|-|-|-|-|-|-|
@@ -115,10 +117,13 @@ data Maybe a
 |infixl|infixr|instance|let|mdo|module|newtype|of|
 |proc|qualified|rec|then |type|where| | |
 
-# Reserved Symbols
+## Reserved Symbols
 | | | | | | | | |
 |-|-|-|-|-|-|-|-|
 | \` |'|"|-|--|-<|-<<|->|
 |::|;|<-|,|=|=>|>|~|
 |!|?| #| *| @| [\|, \|]| `\` | _ |
 |{, }|{-, -}|\|| | | | | | |
+
+# More Fun Stuff
+ - Literate Haskell : https://wiki.haskell.org/Literate_programming
