@@ -35,11 +35,8 @@ newtype Coordinates =
 -- in order to produce the value "Coordinates some-int some-int" of type "Coordinates"
 ```
 
-#### data
- - `data` creates either a __Tagged Union__ or a __Record Type__
- 
-__Tagged union__:
-- Simply a Type with multiple `Value Cnstructors`
+#### Tagged Union
+- Simply a Type with multiple `Value Constructors`
 - Common to name the `Value Constructors` differently than the `Type Name`
 
 ```haskell
@@ -60,7 +57,9 @@ data Bool
   | False
 ```
 
-__Record Type__:
+#### Record Type
+ - Simply a type who's value is a composite of many fields.
+ 
 ```haskell
 data Person = Person 
   { name :: String
