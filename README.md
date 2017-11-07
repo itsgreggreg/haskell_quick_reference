@@ -8,6 +8,10 @@
 --    ⇣
 type Age = Int
 ```
+From the standard lib:
+```haskell
+type String = [Char] 
+```
 
 #### New Simple Type
  - Creates a `brand new` type.
