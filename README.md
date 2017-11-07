@@ -3,9 +3,9 @@
  - 5 minute haskell introduction : https://www.tryhaskell.org/
  - Try Haskell online : https://glot.io/new/haskell , https://repl.it/languages/haskell
  
-## Types
-### Creating types
-#### Alias an Eixisting type
+# Types
+## Creating types
+### Alias an Eixisting type
  - Creates merely an `alias` for an existing type.
  - Can make code more readable.
  - Can be used interchangeably with what is being aliased. Compiler don't care.
@@ -19,7 +19,7 @@ From the standard lib:
 type String = [Char] 
 ```
 
-#### New Simple Type
+### New Simple Type
  - Creates a `brand new` type.
  - It is common to name the `Value Constructor` the same as the `Type Name`
 ```haskell
@@ -45,7 +45,7 @@ newtype Coordinates =
 -- order to produce the value "Coordinates some-int some-int" of type "Coordinates"
 ```
 
-#### Tagged Union
+### Tagged Union
 - Simply a Type with multiple `Value Constructors`
 - It is common to name the `Value Constructors` differently than the `Type Name`
 
@@ -67,7 +67,7 @@ data Bool
   | False
 ```
 
-#### Record Type
+### Record Type
  - Simply a type who's value is a composite of many fields.
  
 ```haskell
@@ -77,11 +77,11 @@ data Person = Person
   }
 ```
 
-### Type Variables
+## Type Variables
  - All of our types above are __concrete__ -or-  __monomorphic__.
  - To make a type definition __polymorphic__ simply add a __variable__.
  
-#### tagged union
+### tagged union
 ```haskell
 --         ┌ Type Variable
 --         ⇣
@@ -92,10 +92,10 @@ data Maybe a
 --       └ The constructor "Just" can be passed a value of any type to produce a value of type "Maybe"
 ```
 
-### Type Classes
+## Type Classes
  - For Functions to be __polymorphic__ we must have an understanding of how they will work on different __types__.
  - Type Classes are used for just such a purpose.
  
-#### Class
+### Class
 
-#### Instance
+### Instance
