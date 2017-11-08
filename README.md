@@ -16,6 +16,8 @@
  - Written literally as a series of didgits
  - `Int` for machine integers
  - `Integer` for arbitrary precision
+ - Use `Integer` unless you know you need `Int`
+ 
 ```haskell
 > a = 10 :: Integer
 > b = 3 :: Integer
