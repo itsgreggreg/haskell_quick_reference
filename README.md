@@ -12,6 +12,22 @@
 
 # Primitive Data Types
 ## Numbers
+ - Written literally
+ - All Integers are of type `Num` when written literally
+ - `Num`s can be coerced into any Integer or Float type
+ - All Floats are of type `Fractional` when written literally
+ - `Fractional`s cannot be coerced to Integrs
+```haskell
+> :t 1
+1 :: Num t => t
+> :t 1.5
+1.5 :: Fractional t => t
+> 10 == (10 :: Integer)
+True
+> 10.0 == (10 :: Integer)
+error
+```
+ 
 ### Integers
  - Written literally as a series of didgits
  - `Int` for machine integers
