@@ -24,6 +24,8 @@
 1.5 :: Fractional t => t
 > 10 == (10 :: Integer)
 True
+> 10 == 10.0
+True
 > 10.0 == (10 :: Integer)
 error
 ```
