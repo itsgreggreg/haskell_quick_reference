@@ -21,9 +21,9 @@
 > b = 3 :: Integer
 > a / b               -- Connot use / to devide integers
 error
-> div a b             -- Use div for integer devision
+> div a b             -- div for integer devision
 3
-> rem a b             -- Rem is modulus
+> rem a b             -- rem is modulus
 1
 > div a (3 :: Int)    -- Cannot mix int types
 error
