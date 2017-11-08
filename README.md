@@ -19,9 +19,9 @@
 ```haskell
 > a = 10 :: Integer
 > b = 3 :: Integer
-> a / b               -- Connot use / to devide integers
+> a / b               -- Connot use / to divide integers
 error
-> div a b             -- div for integer devision
+> div a b             -- div for integer division
 3
 > rem a b             -- rem is modulus
 1
