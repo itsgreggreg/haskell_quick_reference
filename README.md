@@ -19,15 +19,15 @@
 ```haskell
 > a = 10 :: Integer
 > b = 3 :: Integer
-> a / b -- Connot use / to devide integers
+> a / b               -- Connot use / to devide integers
 error
-> div a b  -- Use div for integer devision
+> div a b             -- Use div for integer devision
 3
-> rem a b  -- Rem is modulus
+> rem a b             -- Rem is modulus
 1
-> div a (3 :: Int) -- Cannot mix int types
+> div a (3 :: Int)    -- Cannot mix int types
 error
-> :t fromIntegral a -- Convert an Int(egral) type to a Num type
+> :t fromIntegral a   -- Convert an Int(egral) type to a Num type
 fromIntegral a :: Num b => b
 ```
 #### Int
