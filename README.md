@@ -10,8 +10,25 @@
  - Code linter : https://github.com/ndmitchell/hlint
  - All in 1 platform : https://docs.haskellstack.org
 
-# Basic Data Types
-## Int
+# Primitive Data Types
+## Integers
+ - `Int` for machine integers
+ - `Integer` for arbitrary precision
+### Int
+ - Implementations vary, guaranteed to be at least 30 bits.
+```Haskell
+> 9223372036854775807 :: Int
+=> 9223372036854775807
+> 9223372036854775808 :: Int
+<interactive>:81:1: warning: [-Woverflowed-literals]
+    Literal 9223372036854775808 is out of the Int range -9223372036854775808..9223372036854775807
+```
+### Integer
+ - Can hold values up to the memory limit of your machine
+```haskell
+> 9223372036854775808 :: Integer
+=> 9223372036854775808
+```
 ## Float
 ## Char
  - TODO Encoding
