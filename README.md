@@ -11,10 +11,26 @@
  - All in 1 platform : https://docs.haskellstack.org
 
 # Primitive Data Types
-## Integers
+## Numbers
+### Integers
+ - Written literally as a series of didgits
  - `Int` for machine integers
  - `Integer` for arbitrary precision
-### Int
+```haskell
+> a = 10 :: Integer
+> b = 3 :: Integer
+> a / b -- Connot use / to devide integers
+error
+> div a b  -- Use div for integer devision
+3
+> rem a b  -- Rem is modulus
+1
+> div a (3 :: Int) -- Cannot mix int types
+error
+> :t fromIntegral a -- Convert an Int(egral) type to a Num type
+fromIntegral a :: Num b => b
+```
+#### Int
  - Implementations vary, guaranteed to be at least 30 bits.
 ```Haskell
 > 9223372036854775807 :: Int
@@ -23,7 +39,7 @@
 <interactive>:81:1: warning: [-Woverflowed-literals]
     Literal 9223372036854775808 is out of the Int range -9223372036854775808..9223372036854775807
 ```
-### Integer
+#### Integer
  - Can hold values up to the memory limit of your machine
 ```haskell
 > 9223372036854775808 :: Integer
