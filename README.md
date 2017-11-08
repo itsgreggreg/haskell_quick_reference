@@ -29,7 +29,7 @@
 > 9223372036854775808 :: Integer
 => 9223372036854775808
 ```
-## Float
+## Floats
 ## Char
  - TODO Encoding
 ## List
