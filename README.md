@@ -201,6 +201,7 @@ data Maybe a
  - Enabled with `{-# LANGUAGE  QuasiQuotes #-}`
  - Let you use/implement a DSL to write haskell
  - Follows format of `[functionName| some-content |]` 
+ - Are context aware so you can include bindings in scope
 
 Truncated example for producing html in haskell with Yesod:
 ```haskell
@@ -212,10 +213,13 @@ import Text.Hamlet (shamlet)
 main = putStrLn $ renderHtml [shamlet|
   <p>Hello, my name is #{name person} and I am 
     <strong> #{show $ age person}.
-|]
+  |]
+-- └ Close the quasi quotes
   where
     name = "Michael"
     age = 26
+--   ↑
+--   └ Bindings
 ```
 
 # Repl
