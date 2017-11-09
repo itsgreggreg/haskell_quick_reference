@@ -198,7 +198,8 @@ data Maybe a
 |{, }|{-, -}|\|| | | | | | |
 
 # Quasi Quotes
- - Enabled with `{-# LANGUAGE  QuasiQuotes #-}`
+ - Enabled per file with `{-# LANGUAGE  QuasiQuotes #-}`
+ - Enabled on the compiler with `-XQuasiQuotes`
  - Let you use/implement a DSL to write haskell
  - Follows format of `[functionName| some-content |]` 
  - Are context aware so you can include bindings in scope
