@@ -197,6 +197,26 @@ data Maybe a
 |!|?| #| *| @| [\|, \|]| `\` | _ |
 |{, }|{-, -}|\|| | | | | | |
 
+# Quasi Quotes
+ - Enabled with `{-# LANGUAGE  QuasiQuotes #-}`
+ - Let you use/implement a DSL to write haskell
+
+Truncated example for producing html in haskell with Yesod:
+```haskell
+{-# LANGUAGE QuasiQuotes #-}
+import Text.Hamlet (shamlet)
+
+--                              ┌ Quasi Quoter called shamlet
+--                              ⇣
+main = putStrLn $ renderHtml [shamlet|
+  <p>Hello, my name is #{name person} and I am 
+    <strong> #{show $ age person}.
+|]
+  where
+    name = "Michael"
+    age = 26
+```
+
 # Repl
  - Start by running `ghci`
  - If you're using Stack, start by running `stack ghci` or `stack repl`
