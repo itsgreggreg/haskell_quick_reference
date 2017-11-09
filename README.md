@@ -200,6 +200,7 @@ data Maybe a
 # Quasi Quotes
  - Enabled with `{-# LANGUAGE  QuasiQuotes #-}`
  - Let you use/implement a DSL to write haskell
+ - Follows format of `[functionName| some-content |]` 
 
 Truncated example for producing html in haskell with Yesod:
 ```haskell
