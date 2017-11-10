@@ -176,8 +176,24 @@ data Maybe a
  - Type Classes are used for just such a purpose.
  
 ### Class
+ - We define a __typeclass__ with the `class` keyword.
+ 
+Defining our own polymorphic equality (==) function:
+```haskell
+class MyEq a where
+    equals :: a -> a -> Bool
+```
 
 ### Instance
+ - We define __implementations__ of the __typeclass__ with the `instance` keyword
+ 
+ implementing `isEqual` for Booleans
+ ```haskell
+ instance MyEq Bool where
+    equals True  True  = True
+    equals False False = True
+    equals _     _     = False
+ ```
 
 # Syntax
 ## Reserved Words
