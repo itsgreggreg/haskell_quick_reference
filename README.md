@@ -181,18 +181,22 @@ data Maybe a
 Defining our own polymorphic equality (==) function:
 ```haskell
 class MyEq a where
-    equals :: a -> a -> Bool
+    equal :: a -> a -> Bool
+    
+    notEqual :: a -> a -> Bool
+    notEqual x y = not (equal x y)
 ```
 
 ### Instance
  - We define __implementations__ of the __typeclass__ with the `instance` keyword
+ - Since `notEqual` has a default implementation that depends on `equal` we only have to specify `equal`
  
- implementing `isEqual` for Booleans
+Implementing `isEqual` for `Bool`:
  ```haskell
  instance MyEq Bool where
-    equals True  True  = True
-    equals False False = True
-    equals _     _     = False
+    equal True  True  = True
+    equal False False = True
+    equal _     _     = False
  ```
 
 # Syntax
