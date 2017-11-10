@@ -191,7 +191,7 @@ class MyEq a where
  - We define __implementations__ of the __typeclass__ with the `instance` keyword
  - Since `notEqual` has a default implementation that depends on `equal` we only have to specify `equal`
  
-Implementing `isEqual` for `Bool`:
+Implementing `equal` for `Bool`:
  ```haskell
  instance MyEq Bool where
     equal True  True  = True
