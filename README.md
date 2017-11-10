@@ -66,6 +66,10 @@ fromIntegral a :: Num b => b
 => 9223372036854775808
 ```
 ## Floats
+ - `Double`	for Double-precision floating point.
+ - `Float`	for Single-precision floating point. Often used when interfacing with C.
+ - Use `Double` unless you know you need `Float`
+ 
 ## Char
  - TODO Encoding
 ## List
