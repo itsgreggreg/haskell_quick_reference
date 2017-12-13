@@ -208,6 +208,14 @@ Implementing `equal` for `Bool`:
  ```
 
 # Syntax
+
+## List Comprehensions
+```haskell
+> [ x ^ 2 | x <- [1..10]]
+[1,4,9,16,25,36,49,64,81,100]
+> [(x, y) | x <- [1..10], y <- [1..10], x > 7, y < 3]
+[(8,1),(8,2),(9,1),(9,2),(10,1),(10,2)]
+```
 ## Reserved Words
 
 | | | | | | | | |
