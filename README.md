@@ -208,6 +208,18 @@ Implementing `equal` for `Bool`:
  ```
 
 # Syntax
+## Defining Functions
+### Case as Function Body
+```haskell
+myFilt :: (a -> Bool) -> [a] -> [a]
+myFilt _ [] = []
+myFilt f (x:xs)
+  | f x = x : myFilt f xs
+  | otherwise = myFilt f xs
+  
+> myFilt even [1..10]
+[2,4,6,8,10]
+```
 
 ## List Comprehensions
 ```haskell
