@@ -209,16 +209,29 @@ Implementing `equal` for `Bool`:
 
 # Syntax
 ## Defining Functions
-### Case as Function Body
+### Guards
+ - The first guard that evaluates to `true` is run.
+ - `otherwise == true`
+ - If no guards match and there are no other function heads, you will get `Exception: Non-exhaustive patterns in function myFun`
 ```haskell
 myFilt :: (a -> Bool) -> [a] -> [a]
 myFilt _ [] = []
 myFilt f (x:xs)
-  | f x = x : myFilt f xs
+  | f x       = x : myFilt f xs
   | otherwise = myFilt f xs
   
 > myFilt even [1..10]
 [2,4,6,8,10]
+
+
+isFour :: (Eq a, Num a) => a -> Bool
+isFour a
+    | a == 4 = True
+    
+> isFour 4
+True
+> isFour 5
+*** Exception: Non-exhaustive patterns in function isFour
 ```
 
 ## List Comprehensions
