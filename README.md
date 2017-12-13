@@ -83,6 +83,10 @@ http://hackage.haskell.org/package/base-4.2.0.1/docs/Text-Printf.html
 ```haskell
 > let a = [1,2,3,4]
 > Text.Printf.printf "the length of %s is %d\n" (show a) (length a)
+> elem 1 [2,3,4]
+False
+> elem 1 [1,2,3]
+True
 ```
 
 # Types
