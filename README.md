@@ -294,6 +294,10 @@ main = putStrLn $ renderHtml [shamlet|
  ## Useful Commands
   - `:help` -or- `:h` : Print a list of repl commands
   - `:type some-value` -or- `:t some-value` : Display type information for a value
+  - `:load some-module` -or- `:l some-module` : Load a module into the repl
+  - `:reload` -or- `:r` : Reload all loaded modules
+  - `:module` -or- `:m` : Unload all loaded modules
+  
 ```haskell
 > :t Nothing
 Nothing :: Maybe a
