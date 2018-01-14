@@ -180,9 +180,32 @@ data Maybe a
 ```
 
 ## Type Classes
- - For Functions to be __polymorphic__ we must have an understanding of how they will work on different __types__.
- - Type Classes are used for just such a purpose.
  
+### Functor
+ - Generalizes function application over containers
+ - `<$>` is the infix alias for `fmap`
+ - `a <$ b` is the same as `const a <$> b`
+ 
+```haskell
+class Functor (f :: * -> *) where
+  fmap :: (a -> b) -> f a -> f b
+  (<$) :: a -> f b -> f a
+```
+
+```haskell
+> fmap ((*) 2) [1,2,3]
+-- [2,4,6]
+> (*) 2 <$> [1,2,3]
+-- [2,4,6]
+> fmap ((*) 2) (Just 10)
+-- Just 20
+
+> "Hello" <$ Just 10
+-- Just "Hello"
+> Nothing <$ [1,2,3]
+-- [Nothing,Nothing,Nothing]
+```
+
 ### Class
  - We define a __typeclass__ with the `class` keyword.
  
