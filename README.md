@@ -231,6 +231,26 @@ Implementing `equal` for `Bool`:
  ```
 
 # Syntax
+## Common Infix Functions
+`(.)` : Function Composition
+```haskell
+> :t (.)
+-- (.) :: (b -> c) -> (a -> b) -> a -> c
+> a = ((*) 2) . const 4
+> a 123
+-- 8
+> a Nothing
+-- 8
+```
+
+`($)` : Pipe Left
+```haskell
+> :t ($)
+-- ($) :: (a -> b) -> a -> b
+> head $ map (*2) [13, 50, 1000]
+-- 26
+```
+
 ## Defining Functions
 ### Guards
  - The first guard that evaluates to `true` is run.
