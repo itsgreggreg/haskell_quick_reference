@@ -185,6 +185,9 @@ data Maybe a
  - Generalizes function application over containers
  - `<$>` is the infix alias for `fmap`
  - `a <$ b` is the same as `const a <$> b`
+ - Since Functor requires a kind of `* -> *` it _must_ only work on 1 type valiable
+ - for `(a, b)` it works on `b` and leaves `a` unchanged.
+ - for `Either a b` it works on `b` and leaves `a` unchanged.
  
 ```haskell
 class Functor (f :: * -> *) where
@@ -199,6 +202,12 @@ class Functor (f :: * -> *) where
 -- [2,4,6]
 > fmap ((*) 2) (Just 10)
 -- Just 20
+> fmap ((*) 2) (Left 10)
+-- Left 10
+> fmap ((*) 2) (Right 10)
+-- Right 20
+> fmap ((*) 2) (10,10)
+-- (10, 20)
 
 > "Hello" <$ Just 10
 -- Just "Hello"
