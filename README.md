@@ -186,7 +186,7 @@ data Maybe a
  - Generalizes function application over containers
  - `<$>` is the infix alias for `fmap`
  - `a <$ b` is the same as `const a <$> b`
- - Since Functor requires a kind of `* -> *` it _must_ only work on 1 type variable
+ - Since Functor requires a `kind` of `* -> *` it _must_ only work on 1 type variable
  - for `(a, b)` it works on `b` and leaves `a` unchanged.
  - for `Either a b` it works on `b` and leaves `a` unchanged.
  
