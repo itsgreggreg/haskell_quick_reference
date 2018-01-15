@@ -216,6 +216,57 @@ class Functor (f :: * -> *) where
 -- [Nothing,Nothing,Nothing]
 ```
 
+### Monoid
+ - Generalizes how a strucutre should be associated with another structure of the same type
+ - Must have an identity function `mempty`
+ 
+```haskell
+class Monoid a where
+  mempty :: a
+  mappend :: a -> a -> a
+  mconcat :: [a] -> a
+```
+
+```haskell
+> mempty
+-- ()
+> mempty :: [a]
+-- []
+> mappend [1,2,3] [4,5,6]
+-- [1,2,3,4,5,6]
+> mconcat [[1,2,3], [4,5], [6]]
+-- [1,2,3,4,5,6]
+```
+
+Sometimes there isn't one clear way to associate structures of the same type and so you must be more specific.
+This is the case with `Integral` and you must use the more specific `Sum Integral` and `Product Integral` types.
+```haskell
+> import Data.Monoid
+> mempty :: Sum Int
+-- Sum 0
+> mappend (Sum 9) mempty
+-- Sum 9
+> mconcat [(Sum 3), (Sum 4)]
+Sum 7
+> mempty :: Product Int
+-- Product 1
+> mappend (Product 9) mempty
+-- Product 9
+> mconcat [(Product 3), (Product 4)]
+```
+
+### Semigroup
+ - Simply a monoid without an identity function
+ 
+```haskell
+-- you must import Data.Semigroup to use
+class Semigroup a where
+  (Data.Semigroup.<>) :: a -> a -> a
+  default (Data.Semigroup.<>) :: Monoid a => a -> a -> a
+  sconcat :: Data.List.NonEmpty.NonEmpty a -> a
+  stimes :: Integral b => b -> a -> a
+```
+
 ### Class
  - We define a __typeclass__ with the `class` keyword.
  
