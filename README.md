@@ -267,6 +267,44 @@ class Semigroup a where
   stimes :: Integral b => b -> a -> a
 ```
 
+### Applicative
+ - A way of generalizing a container of functions over a container of values
+ 
+ ```haskell
+ class Functor f => Applicative (f :: * -> *) where
+  pure :: a -> f a
+  (<*>) :: f (a -> b) -> f a -> f b
+  GHC.Base.liftA2 :: (a -> b -> c) -> f a -> f b -> f c
+  (*>) :: f a -> f b -> f b
+  (<*) :: f a -> f b -> f a
+  {-# MINIMAL pure, ((<*>) | liftA2) #-}
+ ```
+
+```haskell
+> pure 1 :: [Int]
+-- [1]
+> pure 1 :: Maybe Int
+-- Just 1
+
+> Nothing <*> Just 2
+-- Nothing
+> Just ((*) 4) <*> Nothing
+-- Nothing
+> Just ((*) 4) <*> Just 2
+-- Just 8
+
+> [minimum, maximum] <*> [[2,3,4], [5,6,7]]
+-- [2,5,4,7]
+
+> [1..10] *> [0,1]
+-- [0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1]
+> [1..10] <* [0,1]
+-- [1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10]
+
+> liftA2 (,) [1, 2] [3, 4] -- the same as (,) <$> [1,2] <*> [3,4]
+-- [(1,3),(1,4),(2,3),(2,4)]
+```
+
 ### Class
  - We define a __typeclass__ with the `class` keyword.
  
