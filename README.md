@@ -448,5 +448,15 @@ Nothing :: Maybe a
 (round 1.5) :: Integral b => b
 ```
 
+## Blocks of code
+ - delimited with `:{` and `:}`
+ 
+ ```haskell
+ > :{
+ >  some_multi_line
+ >  expression
+ > :}
+ ```
+
 # More Fun Stuff
  - Literate Haskell : https://wiki.haskell.org/Literate_programming
