@@ -306,7 +306,7 @@ class Semigroup a where
 ```
 
 ### Monad
-- A way of chaining wrapped operations that can fail together
+- A way of chaining together wrapped operations that can fail
 
 ```haskell
 class Applicative m => Monad (m :: * -> *) where
