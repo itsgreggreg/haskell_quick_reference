@@ -305,6 +305,25 @@ class Semigroup a where
 -- [(1,3),(1,4),(2,3),(2,4)]
 ```
 
+### Monad
+- A way of chaining wrapped operations that can fail together
+
+```haskell
+class Applicative m => Monad (m :: * -> *) where
+  (>>=) :: m a -> (a -> m b) -> m b
+  (>>) :: m a -> m b -> m b
+  return :: a -> m a
+  fail :: String -> m a
+  {-# MINIMAL (>>=) #-}
+```
+#### Laws
+
+##### Right Identity
+`m >>= return` = `m`
+
+##### Left Identity
+`return x >>= f` = `fx`
+
 ### Class
  - We define a __typeclass__ with the `class` keyword.
  
