@@ -450,7 +450,12 @@ main = putStrLn $ renderHtml [shamlet|
 
 # Repl
  - Start by running `ghci`
- - If you're using Stack, start by running `stack ghci` or `stack repl`
+ 
+## If using Stack
+ - Start the repl by running `stack ghci` or `stack repl`
+ - Specify extra packages to include in the repl context with:
+   - `stack ghci --package regex-posix`
+   - and then import them with `:m +Text.Regex.Posix`
  
  ## Useful Commands
   - `:help` -or- `:h` : Print a list of repl commands
